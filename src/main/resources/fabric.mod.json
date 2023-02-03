@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "lockable-trapdoors",
+	"version": "${version}",
+	"name": "Lockable Trapdoors",
+	"description": "Crouch-click trapdoors to lock them!",
+	"authors": [
+		"Caoimhe Byrne"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/lockable-trapdoors",
+		"sources": "https://github.com/cbyrneee/lockable-trapdoors",
+		"issues": "https://github.com/cbyrneee/lockable-trapdoors/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/lockable-trapdoors/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.cbyrne.lockabletrapdoors.LockableTrapdoors"
+		],
+		"preLaunch": [
+			"dev.cbyrne.lockabletrapdoors.prelaunch.PreLaunch"
+		]
+	},
+	"mixins": [
+		"lockable-trapdoors.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.13",
+		"minecraft": ">=1.19.2",
+		"java": ">=17"
+	}
+}
