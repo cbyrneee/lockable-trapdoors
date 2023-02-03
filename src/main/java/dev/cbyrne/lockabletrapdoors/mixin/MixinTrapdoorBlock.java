@@ -35,7 +35,7 @@ public abstract class MixinTrapdoorBlock extends Block {
     private final TrapdoorBlockHook lockableTrapdoors$hook = new TrapdoorBlockHook();
 
     /**
-     * Required beacuse we are inheriting {@link Block}
+     * Required because we are inheriting {@link Block}
      */
     public MixinTrapdoorBlock(Settings settings) {
         super(settings);
