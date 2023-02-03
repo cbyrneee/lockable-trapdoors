@@ -2,8 +2,8 @@
 
 <img width="420px" src="https://cdn.modrinth.com/data/s0rkTZsK/images/6ec4442f9fbe8f75658e6e3cf28954050c5e846b.png" alt="An image showing the text that appears when you lock a trapdoor" />
 
-**Lockable Trapdoors** is a mod for [Fabric](https://fabricmc.net) is a mod for Fabric which allows you to lock your
-trapdoors by crouching and right-clicking on them!
+**Lockable Trapdoors** is a mod for [Fabric](https://fabricmc.net) which allows you to lock your trapdoors by crouching 
+and right-clicking on them!
 
 > **Note**
 > If you're playing on a server with friends, the mod must be installed on the server and everyone playing must have it
