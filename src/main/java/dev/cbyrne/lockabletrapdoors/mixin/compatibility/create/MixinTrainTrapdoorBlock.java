@@ -39,12 +39,11 @@ public class MixinTrainTrapdoorBlock extends TrapdoorBlock {
      * Cycle the {@link Properties#TRAPDOOR_LOCKED} property when crouch-clicking a trap door.
      */
     @ModifyVariable(
-        method = {"method_9534", "onUse"},
+        method = "onUse(Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;\n",
         at = @At(
             value = "HEAD"
         ),
-        ordinal = 0, // state = state.cycle(...);
-        remap = false
+        ordinal = 0 // state = state.cycle(...);
     )
     private BlockState lockableTrapdoors$cycleLockedState(
         BlockState state,
@@ -61,15 +60,12 @@ public class MixinTrainTrapdoorBlock extends TrapdoorBlock {
     /**
      * Prevent the player from opening trapdoors if it has the {@link Properties#TRAPDOOR_LOCKED} property.
      */
-    @SuppressWarnings("DefaultAnnotationParam") // remap = true is not default in this case
     @WrapOperation(
-        method = {"method_9534", "onUse"},
+        method = "onUse(Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;\n",
         at = @At(
             value = "INVOKE",
-            target = "Lnet/minecraft/block/BlockState;cycle(Lnet/minecraft/state/property/Property;)Ljava/lang/Object;",
-            remap = true
-        ),
-        remap = false
+            target = "Lnet/minecraft/block/BlockState;cycle(Lnet/minecraft/state/property/Property;)Ljava/lang/Object;"
+        )
     )
     private Object lockableTrapdoors$onlyOpenIfUnlocked(
         BlockState state,
