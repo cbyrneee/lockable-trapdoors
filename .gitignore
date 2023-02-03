@@ -11,7 +11,7 @@ classes/
 
 # idea
 
-.idea/
+.idea/**/*
 *.iml
 *.ipr
 *.iws
@@ -39,3 +39,6 @@ hs_err_*.log
 replay_*.log
 *.hprof
 *.jfr
+
+# Allow
+!/.idea/icon.png
