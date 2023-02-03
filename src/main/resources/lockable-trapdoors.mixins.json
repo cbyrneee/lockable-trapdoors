@@ -1,6 +1,7 @@
 {
   "required": true,
   "package": "dev.cbyrne.lockabletrapdoors.mixin",
+  "plugin": "dev.cbyrne.lockabletrapdoors.mixin.plugin.ConfigPlugin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "MixinTrapdoorBlock",
